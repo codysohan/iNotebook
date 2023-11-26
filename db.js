@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = process.env.DATABASE_URL || "mongodb://0.0.0.0:27017/inotebook";
+const mongoURI = process.env.MONGO_URL;
 
 const connectToMongo = async () => {
   try {
