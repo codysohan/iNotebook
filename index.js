@@ -16,9 +16,9 @@ app.use("/api/auth", require("./routes/auth.js"));
 app.use("/api/notes", require("./routes/notes.js"));
 
 // Adding this for hosting purpose 
-app.use(express.static(path.join(__dirname, './inotebook/build')));
+app.use(express.static(path.join(__dirname, './client/build')));
 app.get('*', function(req, res){
-  res.sendFile(path.join(__dirname, './inotebook/build/index.html'))
+  res.sendFile(path.join(__dirname, './client/build/index.html'))
 })
 
 // app.get() Commenting this for hosting purpose
